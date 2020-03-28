@@ -1,0 +1,55 @@
+/* pages/category/index.wxss */
+.cates {
+  /* height: 100%; */
+}
+.cates-main {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.left-side {
+  flex: 2;
+}
+.left-item {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+/*  */
+.active {
+  color: var(--activeColor);
+  /* currentColor 当前文字颜色 */
+  border-left: 5rpx solid currentColor;
+}
+
+.right-side {
+  flex: 5;
+}
+/* 
+goods-group
+goods-group-title
+goods-group-list
+goods-item
+*/
+.goods-group-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.goods-group-title {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods-group-title > .delimiter {
+  color: #999;
+  padding: 0 10rpx;
+}
+.goods-item {
+  width: 33.33%;
+  text-align: center;
+}
+.goods-item > image {
+  width: 50%;
+}

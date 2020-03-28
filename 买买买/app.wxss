@@ -1,0 +1,35 @@
+@import "./styles/ali-iconfont";
+page,
+view,
+text,
+swiper,
+swiper-item,
+image,
+navigator {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page {
+  --themeColor: #aad5e2;
+  --activeColor: #219ddd;
+  /* 750rpx === 1vw */
+  font-size: 28rpx;
+}
+
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} */
+
+/* 图片充满容器, 然后由容器控制大小 */
+image {
+  width: 100%;
+}

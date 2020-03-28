@@ -1,0 +1,136 @@
+/* pages/cart/index.wxss */
+.btn-address {
+  padding: 20rpx;
+}
+.btn-address > button {
+  width: 60%;
+}
+.user-info-container {
+  display: flex;
+  padding: 20rpx;
+}
+.user-info {
+  flex: 5;
+}
+.user-phone {
+  flex: 3;
+  text-align: right;
+}
+
+.cart-header {
+  padding: 20rpx;
+  font-size: 36rpx;
+  color: var(--activeColor);
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+.cart-item {
+  display: flex;
+  padding: 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+.cart-chkbox-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-img-wrap {
+  flex: 2;
+}
+.cart-img-wrap > image {
+  width: 80%;
+}
+.cart-info-wrap {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 10rpx;
+}
+.goods-name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.goods-price-container {
+  display: flex;
+  justify-content: space-between;
+}
+.goods-price {
+  color: var(--activeColor);
+  font-size: 34rpx;
+}
+.cart-num-tool {
+  display: flex;
+}
+.num-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55rpx;
+  height: 55rpx;
+  border: 1px solid #ccc;
+}
+.cart-num {
+  padding: 0 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+page {
+  position: relative;
+  padding-bottom: 90rpx;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  /* justify-content: end;
+  align-items: end; */
+  border-top: 1px solid #ccc;
+}
+.chk-all-wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.total-price-wrap {
+  flex: 4;
+  /* text-align: right; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 10rpx;
+}
+.total-price {
+  color: var(--activeColor);
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.pay-wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 35rpx;
+  font-weight: 600;
+  background-color: var(--activeColor);
+}
+
+.empty-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+  margin-top: 50rpx;
+}

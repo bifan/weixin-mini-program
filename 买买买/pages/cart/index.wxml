@@ -1,0 +1,58 @@
+<view class="revice-address">
+  <view class="btn-address" wx:if="{{!address.userName}}">
+    <button bindtap="chooseAddress" type="primary" plain>填写收货地址</button>
+  </view>
+  <view class="user-info-container" wx:else>
+    <view class="user-info">
+      <view>收货人:{{address.userName}}</view>
+      <view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+    </view>
+    <view class="user-phone">{{address.telNumber}}</view>
+  </view>
+    
+</view>
+
+<view class="cart-content">
+  <view class="cart-header">购物车</view>
+  <view class="cart-main">
+    <view wx:if="{{cart.length === 0}}" class="empty-cart">空的哦, 快去选购商品吧.</view>
+    <view class="cart-item"
+    wx:for="{{cart}}"
+    wx:key="goods_id">
+      <view class="cart-chkbox-wrap">
+        <checkbox-group data-id="{{item.goods_id}}" bindchange="checkGoods">
+          <checkbox checked="{{item.checked}}"/>
+        </checkbox-group>
+      </view>
+      <nvigator class="cart-img-wrap">
+        <image src="{{item.goods_small_logo}}" mode="widthFix"/>
+      </nvigator>
+      <view class="cart-info-wrap">
+        <view class="goods-name">{{item.goods_name}}</view>
+        <view class="goods-price-container">
+          <view class="goods-price">￥{{item.goods_price}}</view>
+          <view class="cart-num-tool">
+            <view class="num-edit" bindtap="changeNum" data-id="{{item.goods_id}}" data-operation="{{-1}}">-</view>
+            <view class="cart-num">{{item.num}}</view>
+            <view class="num-edit" bindtap="changeNum" data-id="{{item.goods_id}}" data-operation="{{1}}">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="footer">
+  <view class="chk-all-wrap">
+    <checkbox-group bindchange="checkAll">
+      <checkbox checked="{{allChecked}}"/>全选
+    </checkbox-group>
+  </view>
+  <view class="total-price-wrap">
+    <view class="total-price-line1">
+      合计: <text class="total-price">￥{{totalPrice}}</text>
+    </view>
+    <view class="total-price-line2">包含运费</view>
+  </view>
+  <view class="pay-wrap" bindtap="toPay">结算<text wx:if="{{totalCount > 0}}">({{totalCount}})</text></view>
+</view>
